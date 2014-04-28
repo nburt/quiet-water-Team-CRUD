@@ -4,4 +4,8 @@ class VideosController < ApplicationController
 
   end
 
+  def new
+
+  end
+
 end
