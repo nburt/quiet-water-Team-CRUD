@@ -23,15 +23,17 @@ body {
     padding: 0 ;
 }
 
-#headfootalign {
-    margin-left: 10%;
+.headerfootercontainer {
+    width: 960px;
+    margin: auto;
+}
+.headfootalign {
     display: inline-block;
 }
 
 #nav_links {
     display: inline-block;
     color: white;
-    margin-right: 12%;
     margin-top: 1.7em;
     text-align: right;
     float: right;
