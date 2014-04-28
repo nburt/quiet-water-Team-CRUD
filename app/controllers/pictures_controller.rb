@@ -4,4 +4,8 @@ class PicturesController < ApplicationController
 
   end
 
+  def new
+
+
+  end
 end
