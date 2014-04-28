@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header>
+  <div id="headfootalign">
+  <h1>Media Manager</h1>
+  </div>
+  <div id="nav_links"><a href="/pictures">all pictures</a>  |  <a href="/videos">all videos</a>
+  </div>
+</header>
+<div id="bodycontainer">
+<div id="bodycontent">
 <%= yield %>
-
+</div>
+</div>
+<footer>
+  <div id="headfootalign">
+  <div id="footertext">Not copyrighted at all</div>
+  </div>
+</footer>
 </body>
+
 </html>
