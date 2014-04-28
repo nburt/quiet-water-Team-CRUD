@@ -15,3 +15,5 @@ group :development, :test do
   gem 'capybara', '~> 2.2.1'
   gem 'rspec-rails', '~> 2.14.2'
 end
+
+gem 'rails_12factor', '~> 0.0.2'
