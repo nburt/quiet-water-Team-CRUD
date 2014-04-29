@@ -30,4 +30,31 @@ feature 'Video manager' do
 
   end
 
+  scenario 'The videos index page displays a list of all video links' do
+
+    visit '/'
+    click_on 'all videos'
+    click_on 'New Video'
+
+    fill_in 'video_url', with: 'https://www.youtube.com/watch?v=a1Y73sPHKxw'
+    fill_in 'video_description', with: 'Dramatic Hampster'
+    fill_in 'video_rating', with: '5'
+
+    click_on 'Create Video'
+
+    click_link 'all videos'
+    click_on 'New Video'
+
+    fill_in 'video_url', with: 'https://www.youtube.com/watch?v=a5555555'
+    fill_in 'video_description', with: 'Dramatic Hampster'
+    fill_in 'video_rating', with: '5'
+
+    click_on 'Create Video'
+    click_link 'all videos'
+
+    expect(page).to have_content 'https://www.youtube.com/watch?v=a1Y73sPHKxw'
+    expect(page).to have_content 'https://www.youtube.com/watch?v=a5555555'
+
+  end
+
 end

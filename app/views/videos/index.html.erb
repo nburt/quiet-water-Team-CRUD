@@ -1,2 +1,9 @@
 <h1>Videos</h1>
 <%= link_to "New Video", new_video_path %>
+<br>
+
+<% @videos.each do |video| %>
+    <div id="video_links">
+      <a href="/videos/<%= video.id %>"><%= video.url %></a>
+    </div>
+<% end %>

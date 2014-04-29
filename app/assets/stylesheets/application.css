@@ -140,3 +140,10 @@ td {
 p {
   white-space: pre;
 }
+
+#video_links {
+    margin: 2em;
+}
+#video_links a:link, a:visited {
+    color: blue;
+}
