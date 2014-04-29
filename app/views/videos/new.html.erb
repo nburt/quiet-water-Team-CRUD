@@ -1,8 +1,10 @@
 <h1>Add a Video</h1>
-<% if @video.errors.messages %>
-    <% @video.errors.messages.each do |k, v| %>
-        <%= v.first %> <br>
-    <% end %>
+<% if @video.errors.messages.present? %>
+    <ul>
+      <% @video.errors.messages.each do |k, v| %>
+          <li class="error_message"><%= v.first %></li>
+      <% end %>
+    </ul>
 <% end %>
 <table>
   <form action="/videos" method="post">
@@ -14,7 +16,9 @@
     <br>
     <tr>
       <td>Short Description</td>
-      <td><textarea style="margin-top: 0;width: 25em;height: 5em" name="video_description"><%= @video.description %></textarea></td>
+      <td>
+        <textarea style="margin-top: 0;width: 25em;height: 5em" name="video_description"><%= @video.description %></textarea>
+      </td>
     </tr>
     <br>
     <tr>
@@ -23,7 +27,9 @@
     </tr>
     <br>
     <tr>
-      <td><input type="submit" value="Create Video"></td>
+      <td>
+        <button type="submit">Create Video</button>
+      </td>
     </tr>
   </form>
 </table>
