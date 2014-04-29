@@ -62,6 +62,7 @@ body {
   min-height: 629px;
   background-color: white;
   margin: auto;
+  padding-bottom: 50px;
 }
 
 #show_left {
@@ -80,6 +81,11 @@ body {
   word-wrap: break-word;
   width: 100%;
   color: #004B7A;
+}
+
+#show_right p {
+  word-wrap: break-word;
+  width: 100%;
 }
 
 #flash_success {
@@ -139,4 +145,20 @@ td {
 
 p {
   white-space: pre;
+}
+
+#images_container {
+  width: 95%;
+  margin: auto;
+}
+
+#images img {
+  min-width: 200px;
+  max-width: 200px;
+  text-align: center;
+}
+
+#images {
+  width: 95%;
+  margin: auto;
 }
