@@ -1,9 +1,35 @@
-<form action="/pictures" method="post">
-  <label for="url">URL of Picture</label>
-  <input type="text" name="url" placeholder="url">
-  <label for="description">Short Description</label>
-  <input type="text" name="description" placeholder="description">
-  <label for="rating">Rating</label>
-  <input type="text" name="rating" placeholder="rating">
-</form>
+<h1>Add a picture</h1>
+<% if @picture.errors.present? %>
+  <ul>
+    <% @picture.errors.messages.each do |message| %>
+      <li class="error_message"><%= message[1][0] %></li>
+    <% end %>
+  </ul>
+<% end %>
+<table>
+  <form class="crud_form" action="<%= pictures_path %>" method="post">
+    <tr>
+      <td><input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><label for="url">URL of Picture</label></td>
+      <td><input type="text" name="url" value="<%= @picture.url %>"></td>
+    </tr>
+    <tr>
+      <td><label for="description">Short Description</label></td>
+      <td><textarea name="description"><%= @picture.description %></textarea></td>
+    </tr>
+    <tr>
+      <td><label for="rating">Rating</label></td>
+      <td><input id="rating" type="number" max="5" min="0" name="rating" value="<%= @picture.rating %>"></td>
+    </tr>
+    <tr>
+      <td>
+        <button type="submit">Create Picture</button>
+      </td>
+      <td></td>
+    </tr>
+  </form>
+</table>
 

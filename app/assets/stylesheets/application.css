@@ -48,7 +48,6 @@ body {
 }
 
 #bodycontent {
-
   padding-top: 80px;
   width: 900px;
   margin: auto;
@@ -63,4 +62,81 @@ body {
   min-height: 629px;
   background-color: white;
   margin: auto;
+}
+
+#show_left {
+  width: 45%;
+  margin: 30px auto 0;
+  float: left;
+}
+
+#show_right {
+  width: 45%;
+  margin: 30px auto 0;
+  float: right;
+}
+
+#show_right a {
+  word-wrap: break-word;
+  width: 100%;
+  color: #004B7A;
+}
+
+#flash_success {
+  margin: 0 0 15px;
+  color: #00961E;
+  font-weight: bold;
+}
+
+#show_left img {
+  max-width: 400px;
+}
+
+.error_message {
+  color: red;
+  font-weight: bold;
+  list-style: none;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+input {
+  border: 2px solid black;
+  width: 400px;
+  height: 20px;
+}
+
+label {
+  margin-right: 60px;
+}
+
+textarea {
+  border: 2px solid black;
+  width: 398px;
+  height: 80px;
+}
+
+button {
+  border: 2px solid black;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 2px 2px 1px black;
+  margin-top: 15px;
+  margin-left: 0;
+}
+
+#rating {
+  width: 130px;
+}
+
+td {
+  vertical-align: top;
+  padding-bottom: 10px;
+}
+
+p {
+  white-space: pre;
 }
