@@ -1,0 +1,10 @@
+<div id="show_left">
+  <img src="<%= @picture.url %>">
+  <p>Rating: <%= @picture.rating %> out of 5</p>
+</div>
+
+<div id="show_right">
+  <p id="flash_success"><%= flash[:success] %></p>
+  <a href="<%= @picture.url %>"><%= @picture.url %></a>
+  <p id="show_description"><%= @picture.description %></p>
+</div>
