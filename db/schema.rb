@@ -22,4 +22,10 @@ ActiveRecord::Schema.define(version: 20140428222906) do
     t.integer "rating"
   end
 
+  create_table "videos", force: true do |t|
+    t.string  "url"
+    t.string  "description"
+    t.integer "rating"
+  end
+
 end

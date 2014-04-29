@@ -1,0 +1,13 @@
+<% p = URI.parse(@video.url) %>
+<% u = CGI.parse(p.query) %>
+<div id="show_left">
+  <iframe width="450" height="300" src="//www.youtube.com/embed/<%=u["v"].first%>" frameborder="0" allowfullscreen></iframe>
+  <p>Rating: <%= @video.rating %> out of 5</p>
+</div>
+
+<div id="show_right">
+  <p id="flash_success"><%= flash[:success] %></p>
+  <a href="<%= @video.url %>"><%= @video.url %></a>
+  <%= link_to "(Edit)", edit_video_path %>
+  <p id="show_description"><%= @video.description %></p>
+</div>

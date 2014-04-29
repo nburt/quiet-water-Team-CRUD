@@ -13,9 +13,52 @@ feature 'Video manager' do
     click_on 'all videos'
     click_on 'New Video'
 
-    expect(page).to have_content 'Video URL'
-    expect(page).to have_content 'Description'
-    expect(page).to have_content 'Rating'
+    fill_in 'video_url', with: 'https://www.youtube.com/watch?v=a1Y73sPHKxw'
+    click_on 'Create Video'
+    expect(page).to have_content "Description cannot be blank"
+
+    fill_in 'video_url', with: 'https://www.youtube.com/watch?v=a1Y73sPHKxw'
+    fill_in 'video_description', with: 'Dramatic Hampster'
+    fill_in 'video_rating', with: '5'
+
+    click_on 'Create Video'
+
+    expect(page).to have_content 'Video successfully created'
+    expect(page).to have_content 'https://www.youtube.com/watch?v=a1Y73sPHKxw'
+    expect(page).to have_content 'Dramatic Hampster'
+    expect(page).to have_content '5 out of 5'
+
+    click_on 'Edit'
+    fill_in 'video_description', with: 'Happy Hampster'
+    click_on 'Update Video'
+    expect(page).to have_content 'Happy Hampster'
+
+  end
+
+  scenario 'The videos index page displays a list of all video links' do
+
+    visit '/'
+    click_on 'all videos'
+    click_on 'New Video'
+
+    fill_in 'video_url', with: 'https://www.youtube.com/watch?v=a1Y73sPHKxw'
+    fill_in 'video_description', with: 'Dramatic Hampster'
+    fill_in 'video_rating', with: '5'
+
+    click_on 'Create Video'
+
+    click_link 'all videos'
+    click_on 'New Video'
+
+    fill_in 'video_url', with: 'https://www.youtube.com/watch?v=a5555555'
+    fill_in 'video_description', with: 'Dramatic Hampster'
+    fill_in 'video_rating', with: '5'
+
+    click_on 'Create Video'
+    click_link 'all videos'
+
+    expect(page).to have_content 'https://www.youtube.com/watch?v=a1Y73sPHKxw'
+    expect(page).to have_content 'https://www.youtube.com/watch?v=a5555555'
 
   end
 
