@@ -22,7 +22,7 @@ feature 'Picture manager' do
     expect(page).to have_content 'http://i0006.photobucket.com/albums/0006/findstuff22/Best%20Images/Animals/6a81f2da.jpg'
     expect(page).to have_content 'Cool canyon photo'
     expect(page).to have_content '5'
-    expect(page).should have_selector("img[src$='http://i0006.photobucket.com/albums/0006/findstuff22/Best%20Images/Animals/6a81f2da.jpg']")
+    expect(page).to have_selector("img[src$='http://i0006.photobucket.com/albums/0006/findstuff22/Best%20Images/Animals/6a81f2da.jpg']")
     expect(page).to have_content 'Picture successfully created'
   end
 
