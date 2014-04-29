@@ -8,6 +8,6 @@
 <div id="show_right">
   <p id="flash_success"><%= flash[:success] %></p>
   <a href="<%= @video.url %>"><%= @video.url %></a>
-
+  <%= link_to "(Edit)", edit_video_path %>
   <p id="show_description"><%= @video.description %></p>
 </div>

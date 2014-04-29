@@ -28,6 +28,11 @@ feature 'Video manager' do
     expect(page).to have_content 'Dramatic Hampster'
     expect(page).to have_content '5 out of 5'
 
+    click_on 'Edit'
+    fill_in 'video_description', with: 'Happy Hampster'
+    click_on 'Update Video'
+    expect(page).to have_content 'Happy Hampster'
+
   end
 
   scenario 'The videos index page displays a list of all video links' do

@@ -1,0 +1,35 @@
+<h1>Add a Video</h1>
+<% if @video.errors.messages.present? %>
+    <ul>
+      <% @video.errors.messages.each do |k, v| %>
+          <li class="error_message"><%= v.first %></li>
+      <% end %>
+    </ul>
+<% end %>
+<table>
+  <form action="/videos" method="post">
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+    <tr>
+      <td style="width: 12em">URL of Video</td>
+      <td><input style="width: 25em" type="text" name="video_url" autofocus="autofocus" value="<%= @video.url %>"></td>
+    </tr>
+    <br>
+    <tr>
+      <td>Short Description</td>
+      <td>
+        <textarea style="margin-top: 0;width: 25em;height: 5em" name="video_description"><%= @video.description %></textarea>
+      </td>
+    </tr>
+    <br>
+    <tr>
+      <td>Rating</td>
+      <td><input style="width: 30%" type="number" max="5" min="0" name="video_rating" value="<%= @video.rating %>"></td>
+    </tr>
+    <br>
+    <tr>
+      <td>
+        <button type="submit">Update Video</button>
+      </td>
+    </tr>
+  </form>
+</table>

@@ -26,4 +26,8 @@ class VideosController < ApplicationController
     @video = Video.find_by_id params[:id]
   end
 
+  def edit
+    @video = Video.find_by_id params[:id]
+  end
+
 end
