@@ -65,4 +65,21 @@ feature 'Picture manager' do
 
   end
 
+  scenario "User can delete a picture" do
+
+    visit '/'
+    click_on 'all pictures'
+    click_on 'New Picture'
+
+    fill_in 'url', with: 'http://i1095.photobucket.com/albums/i469/azrie1/music/ItsGonnaBeMe.jpg'
+    fill_in 'description', with: 'Cool canyon photo'
+    fill_in 'rating', with: '5'
+    click_on 'Create Picture'
+
+    click_on 'Delete Picture'
+
+    expect(page).to_not have_selector("img[src$='http://i1095.photobucket.com/albums/i469/azrie1/music/ItsGonnaBeMe.jpg']")
+
+  end
+
 end

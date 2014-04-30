@@ -8,4 +8,10 @@
   <a href="<%= @picture.url %>"><%= @picture.url %></a>
   <%= link_to "(Edit)", edit_picture_path %>
   <p id="show_description"><%= @picture.description %></p>
+  <div id="delete_button">
+    <form action="<%= picture_path %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit">Delete Picture</button>
+    </form>
+  </div>
 </div>
