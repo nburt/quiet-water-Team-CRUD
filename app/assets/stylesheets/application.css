@@ -135,6 +135,15 @@ button {
   margin-left: 0;
 }
 
+#delete_button button {
+    background-color: red;
+    color: white;
+}
+
+#delete_button {
+    padding-top: 2em;
+}
+
 #rating {
   width: 130px;
 }
