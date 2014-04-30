@@ -10,7 +10,6 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.new(allowed_parameters)
-
     if @picture.save
       redirect_to picture_path(@picture), :flash => {:success => "Picture successfully created"}
     else
@@ -29,7 +28,12 @@ class PicturesController < ApplicationController
 
   def update
     @picture = Picture.update(params[:id], allowed_parameters)
-    redirect_to picture_path
+    if @picture.valid?
+      redirect_to picture_path
+    else
+      @picture
+      render :edit
+    end
   end
 
   private
