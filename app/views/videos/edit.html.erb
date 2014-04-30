@@ -6,8 +6,9 @@
       <% end %>
     </ul>
 <% end %>
-<table>
-  <form action="/videos" method="post">
+<form action="<%=video_path%>" method="post">
+  <table>
+    <input type="hidden" name="_method" value="put">
     <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
     <tr>
       <td style="width: 12em">URL of Video</td>
@@ -31,5 +32,5 @@
         <button type="submit">Update Video</button>
       </td>
     </tr>
-  </form>
-</table>
+  </table>
+</form>

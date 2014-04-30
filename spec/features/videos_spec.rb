@@ -32,6 +32,11 @@ feature 'Video manager' do
     fill_in 'video_description', with: 'Happy Hampster'
     click_on 'Update Video'
     expect(page).to have_content 'Happy Hampster'
+    click_on 'Edit'
+    fill_in 'video_url', with: 'https://www.youtube.com/watch?v=a1Y73sPHKxw'
+    fill_in 'video_description', with: ''
+    click_on 'Update Video'
+    expect(page).to have_content "Description cannot be blank"
 
   end
 
@@ -61,5 +66,6 @@ feature 'Video manager' do
     expect(page).to have_content 'https://www.youtube.com/watch?v=a5555555'
 
   end
+
 
 end
