@@ -36,6 +36,12 @@ class PicturesController < ApplicationController
     end
   end
 
+  def destroy
+    @picture = Picture.find_by_id params[:id]
+    @picture.delete
+    redirect_to pictures_path
+  end
+
   private
 
   def allowed_parameters
