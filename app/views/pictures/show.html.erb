@@ -6,5 +6,6 @@
 <div id="show_right">
   <p id="flash_success"><%= flash[:success] %></p>
   <a href="<%= @picture.url %>"><%= @picture.url %></a>
+  <%= link_to "(Edit)", edit_picture_path %>
   <p id="show_description"><%= @picture.description %></p>
 </div>

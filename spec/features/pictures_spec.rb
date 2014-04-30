@@ -42,7 +42,27 @@ feature 'Picture manager' do
     within '#images' do
       page.first('a').click
     end
+    url = current_url
     expect(page).to have_content "Cool canyon photo"
+
+    visit url
+    click_on 'Edit'
+    fill_in 'description', with: 'Not cool canyon photo'
+    click_on 'Update Picture'
+    click_link 'all pictures'
+    visit url
+    expect(page).to have_content 'Not cool canyon photo'
+    expect(page).to_not have_content "Cool canyon photo"
+
+    visit url
+    click_on 'Edit'
+    fill_in 'url', with: ''
+    fill_in 'description', with: ''
+    fill_in 'rating', with: 5
+    click_on 'Update Picture'
+    expect(page).to have_content 'URL cannot be blank'
+    expect(page).to have_content 'Description cannot be blank'
+
   end
 
 end

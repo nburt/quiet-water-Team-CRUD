@@ -1,7 +1,7 @@
 class VideosController < ApplicationController
 
   def index
-  @videos = Video.all
+    @videos = Video.all
   end
 
   def new
@@ -28,6 +28,20 @@ class VideosController < ApplicationController
 
   def edit
     @video = Video.find_by_id params[:id]
+  end
+
+  def update
+    @video = Video.update(params[:id],
+                          url: params[:video_url],
+                          description: params[:video_description],
+                          rating: params[:video_rating]
+    )
+    if @video.valid?
+      redirect_to video_path
+    else
+      @video
+      render :edit
+    end
   end
 
 end
