@@ -10,7 +10,7 @@ class InstagramsController <ApplicationController
   end
 
   def index
-    @meta = 10
+    
     @html = Instagram.media_search("40.0176335","-105.2819911")
 
   end
