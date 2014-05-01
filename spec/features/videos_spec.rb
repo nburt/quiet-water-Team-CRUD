@@ -72,13 +72,13 @@ feature 'Video manager' do
     click_on 'all videos'
     click_on 'New Video'
 
-    fill_in 'video_url', with: 'https://www.youtube.com/watch?v=a1Y73sPHKxw'
+    fill_in 'video_url', with: 'https://www.youtube.com/watch?v=bN4t9O3sGP0'
     fill_in 'video_description', with: 'Dramatic Hampster'
     fill_in 'video_rating', with: '5'
 
     click_on 'Create Video'
     click_on 'Delete Video'
-    expect(page).to_not have_content 'https://www.youtube.com/watch?v=a1Y73sPHKxw'
+    expect(page).to_not have_content 'https://www.youtube.com/watch?v=bN4t9O3sGP0'
   end
 
 end
