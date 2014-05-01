@@ -1,8 +1,14 @@
 <h1>Instagram Photos</h1>
+
+<% request.user_agent.include?('iPhone') %>
 <div id="instagram_container">
   <% @html.each do |image| %>
       <div id="instagram_image">
-        <a href="<%= image.link %>"><img src="<%= image.images.thumbnail.url %>"></a>
+        <% if request.user_agent.include?('iPhone') %>
+            <a href="instagram://media?id=<%= image.id %>"><img src="<%= image.images.thumbnail.url %>"></a>
+        <% else %>
+            <a href="<%= image.link %>"><img src="<%= image.images.thumbnail.url %>"></a>
+        <% end %>
         <a href="http://instagram.com/<%= image.user.username %>"><%= image.user.username %></a>
         <% if image.caption != nil %>
             <br><%= image.caption.text %>
@@ -10,3 +16,9 @@
       </div>
   <% end %>
 </div>
+
+<link rel="alternate" media="only screen and (max-width: 640px)"
+      href="http://m.example.com/page-1">
+and on the mobile page, the required annotation should be:
+
+<link rel="canonical" href="http://www.example.com/page-1">
