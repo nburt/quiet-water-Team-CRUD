@@ -1,138 +1,144 @@
 header {
-  width: 100%;
-  height: 80px;
-  background: #004B7A;
-  color: white;
-  margin: 0;
-  padding: 0;
-  position: fixed !important;
+    width: 100%;
+    height: 80px;
+    background: #004B7A;
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: fixed !important;
 }
 
 footer {
-  width: 100%;
-  height: 50px;
-  background: #303030;
-  color: white;
-  margin: 0;
-  padding: 0;
-  bottom: 0;
-  position: fixed !important;
+    width: 100%;
+    height: 50px;
+    background: #303030;
+    color: white;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    position: fixed !important;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #8ED0E6;
+    margin: 0;
+    padding: 0;
+    background-color: #8ED0E6;
 }
 
 .headerfootercontainer {
-  width: 900px;
-  margin: auto;
+    width: 900px;
+    margin: auto;
 }
 
 .headfootalign {
-  display: inline-block;
+    display: inline-block;
+}
+
+#headertitle a:link,
+#headertitle a:visited {
+    text-decoration: none;
+    color: white;
 }
 
 #nav_links {
-  display: inline-block;
-  color: white;
-  margin-top: 1.7em;
-  text-align: right;
-  float: right;
+    display: inline-block;
+    color: white;
+    margin-top: 1.7em;
+    text-align: right;
+    float: right;
 }
 
 #nav_links a:link,
 #nav_links a:visited {
-  color: white;
+    color: white;
 }
 
 #bodycontent {
-  padding-top: 80px;
-  width: 900px;
-  margin: auto;
+    padding-top: 80px;
+    width: 900px;
+    margin: auto;
 }
 
 #footertext {
-  margin-top: 1em
+    margin-top: 1em
 }
 
 #bodycontainer {
-  width: 960px;
-  min-height: 629px;
-  background-color: white;
-  margin: auto;
-  padding-bottom: 30px;
+    width: 960px;
+    min-height: 629px;
+    background-color: white;
+    margin: auto;
+    padding-bottom: 30px;
 }
 
 #show_left {
-  width: 45%;
-  margin: 30px auto 0;
-  float: left;
+    width: 45%;
+    margin: 30px auto 0;
+    float: left;
 }
 
 #show_right {
-  width: 45%;
-  margin: 30px auto 0;
-  float: right;
+    width: 45%;
+    margin: 30px auto 0;
+    float: right;
 }
 
 #show_right a {
-  word-wrap: break-word;
-  width: 100%;
-  color: #004B7A;
+    word-wrap: break-word;
+    width: 100%;
+    color: #004B7A;
 }
 
 #show_right p {
-  word-wrap: break-word;
-  width: 100%;
+    word-wrap: break-word;
+    width: 100%;
 }
 
 #flash_success {
-  margin: 0 0 15px;
-  color: #00961E;
-  font-weight: bold;
+    margin: 0 0 15px;
+    color: #00961E;
+    font-weight: bold;
 }
 
 #show_left img {
-  max-width: 400px;
+    max-width: 400px;
     max-height: 400px;
 }
 
 .error_message {
-  color: red;
-  font-weight: bold;
-  list-style: none;
-  margin: 0;
+    color: red;
+    font-weight: bold;
+    list-style: none;
+    margin: 0;
 }
 
 ul {
-  padding: 0;
+    padding: 0;
 }
 
 input {
-  border: 2px solid black;
-  width: 400px;
-  height: 20px;
+    border: 2px solid black;
+    width: 400px;
+    height: 20px;
 }
 
 label {
-  margin-right: 60px;
+    margin-right: 60px;
 }
 
 textarea {
-  border: 2px solid black;
-  width: 398px;
-  height: 80px;
+    border: 2px solid black;
+    width: 398px;
+    height: 80px;
 }
 
 button {
-  border: 2px solid black;
-  background-color: white;
-  padding: 5px;
-  box-shadow: 2px 2px 1px black;
-  margin-top: 15px;
-  margin-left: 0;
+    border: 2px solid black;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 2px 2px 1px black;
+    margin-top: 15px;
+    margin-left: 0;
 }
 
 #delete_button button {
@@ -145,32 +151,32 @@ button {
 }
 
 #rating {
-  width: 130px;
+    width: 130px;
 }
 
 td {
-   vertical-align: top;
-   padding-bottom: 10px;
- }
+    vertical-align: top;
+    padding-bottom: 10px;
+}
 
 p {
-  white-space: pre;
+    white-space: pre;
 }
 
 #images img {
-  min-height: 200px;
-  max-height: 200px;
-  min-width: 200px;
-  max-width: 200px;
-  text-align: center;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+    min-height: 200px;
+    max-height: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
 #images {
-  width: 100%;
-  margin: auto;
+    width: 100%;
+    margin: auto;
 }
 
 #video_links {
@@ -179,4 +185,17 @@ p {
 
 #video_links a:link, a:visited {
     color: blue;
+}
+
+#instagram_image {
+    max-width: 155px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#instagram_container {
+    margin: auto;
+    width: 90%;
 }

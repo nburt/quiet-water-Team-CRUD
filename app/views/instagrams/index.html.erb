@@ -1,1 +1,12 @@
 <h1>Instagram Photos</h1>
+<div id="instagram_container">
+  <% @html.each do |image| %>
+      <div id="instagram_image">
+        <a href="<%= image.link %>"><img src="<%= image.images.thumbnail.url %>"></a>
+        <a href="http://instagram.com/<%= image.user.username %>"><%= image.user.username %></a>
+        <% if image.caption != nil %>
+            <br><%= image.caption.text %>
+        <% end %>
+      </div>
+  <% end %>
+</div>

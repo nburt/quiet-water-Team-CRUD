@@ -5,12 +5,15 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <META HTTP-EQUIV="refresh" CONTENT="<%= @meta %>">
 </head>
 <body>
 <header>
   <div class="headerfootercontainer">
     <div class="headfootalign">
-      <h1>Media Manager</h1>
+      <div id="headertitle">
+        <a href="/"><h1>Media Manager</h1></a>
+      </div>
     </div>
     <div id="nav_links"><a href="/pictures">all pictures</a> | <a href="/videos">all videos</a>
     </div>
