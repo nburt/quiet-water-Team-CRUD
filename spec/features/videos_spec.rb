@@ -55,7 +55,7 @@ feature 'Video manager' do
     click_link 'all videos'
     click_on 'New Video'
 
-    fill_in 'video_url', with: 'https://www.youtube.com/watch?v=a5555555'
+    fill_in 'video_url', with: 'https://www.youtube.com/watch?v=Lx3udh5Y3HM'
     fill_in 'video_description', with: 'Dramatic Hampster'
     fill_in 'video_rating', with: '5'
 
@@ -63,7 +63,7 @@ feature 'Video manager' do
     click_link 'all videos'
 
     expect(page).to have_content 'https://www.youtube.com/watch?v=a1Y73sPHKxw'
-    expect(page).to have_content 'https://www.youtube.com/watch?v=a5555555'
+    expect(page).to have_content 'https://www.youtube.com/watch?v=Lx3udh5Y3HM'
 
   end
 
