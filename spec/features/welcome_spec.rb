@@ -18,7 +18,15 @@ feature 'homepage' do
       click_on 'View All'
     end
     expect(page).to have_content 'Videos'
+  end
 
+  scenario 'a user can see the Instagram link' do
+    visit '/'
+    within '#show_left'do
+      expect(page).to have_content 'Instagram!'
+      click_link 'View Instagram Photos'
+    end
+    expect(page).to have_content 'Instagram Photos'
   end
 
 end

@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   resources :pictures
   resources :videos
+  resources :instagrams
 
 end
